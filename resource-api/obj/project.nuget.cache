@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FmEVNlmHJhM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Erich Garcia\\source\\repos\\PF_Project_4P1W\\resource-api\\resource-api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Erich Garcia\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\Erich Garcia\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
