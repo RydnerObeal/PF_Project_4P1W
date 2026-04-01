@@ -33,9 +33,7 @@ namespace resource_api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("SolvedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("TEXT");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("TEXT");
@@ -57,9 +55,7 @@ namespace resource_api.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Position")
                         .HasColumnType("INTEGER");
@@ -78,6 +74,42 @@ namespace resource_api.Migrations
                     b.ToTable("Images", (string)null);
                 });
 
+            modelBuilder.Entity("resource_api.Models.ImageTag", b =>
+                {
+                    b.Property<Guid>("LibraryImageId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("TagId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("LibraryImageId", "TagId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("ImageTags", (string)null);
+                });
+
+            modelBuilder.Entity("resource_api.Models.LibraryImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LibraryImages", (string)null);
+                });
+
             modelBuilder.Entity("resource_api.Models.Pack", b =>
                 {
                     b.Property<Guid>("Id")
@@ -85,9 +117,7 @@ namespace resource_api.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -119,9 +149,7 @@ namespace resource_api.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasDefaultValueSql("GETUTCDATE()");
+                        .HasColumnType("TEXT");
 
                     b.Property<Guid>("PackId")
                         .HasColumnType("TEXT");
@@ -131,6 +159,25 @@ namespace resource_api.Migrations
                     b.HasIndex("PackId");
 
                     b.ToTable("Puzzles", (string)null);
+                });
+
+            modelBuilder.Entity("resource_api.Models.Tag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("resource_api.Models.GameScore", b =>
@@ -155,6 +202,21 @@ namespace resource_api.Migrations
                     b.Navigation("Puzzle");
                 });
 
+            modelBuilder.Entity("resource_api.Models.ImageTag", b =>
+                {
+                    b.HasOne("resource_api.Models.LibraryImage", null)
+                        .WithMany("ImageTags")
+                        .HasForeignKey("LibraryImageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("resource_api.Models.Tag", null)
+                        .WithMany("ImageTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("resource_api.Models.Puzzle", b =>
                 {
                     b.HasOne("resource_api.Models.Pack", "Pack")
@@ -166,6 +228,11 @@ namespace resource_api.Migrations
                     b.Navigation("Pack");
                 });
 
+            modelBuilder.Entity("resource_api.Models.LibraryImage", b =>
+                {
+                    b.Navigation("ImageTags");
+                });
+
             modelBuilder.Entity("resource_api.Models.Pack", b =>
                 {
                     b.Navigation("Puzzles");
@@ -174,6 +241,11 @@ namespace resource_api.Migrations
             modelBuilder.Entity("resource_api.Models.Puzzle", b =>
                 {
                     b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("resource_api.Models.Tag", b =>
+                {
+                    b.Navigation("ImageTags");
                 });
 #pragma warning restore 612, 618
         }
