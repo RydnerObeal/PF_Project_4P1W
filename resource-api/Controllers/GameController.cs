@@ -28,14 +28,15 @@ namespace resource_api.Controllers
                 return BadRequest("Guess is required");
             }
 
-            if (request.PuzzleId == Guid.Empty || request.UserId == Guid.Empty)
+            if (request.PuzzleId == Guid.Empty || request.UserId == Guid.Empty || request.PackId == Guid.Empty)
             {
-                return BadRequest("PuzzleId and UserId are required");
+                return BadRequest("PuzzleId, PackId, and UserId are required");
             }
 
             var (correct, score) = await _gameService.SubmitGuessAsync(
                 request.PuzzleId,
                 request.UserId,
+                request.PackId,
                 request.Guess);
 
             var response = new
@@ -48,7 +49,7 @@ namespace resource_api.Controllers
         }
 
         /// <summary>
-        /// Get user's profile progress
+        /// Get user's profile progress (global score + pack-specific scores)
         /// </summary>
         [HttpGet("profile/{userId}")]
         public async Task<IActionResult> GetProfileProgress(Guid userId)
@@ -65,6 +66,29 @@ namespace resource_api.Controllers
             {
                 totalScore = totalScore,
                 puzzlesSolved = puzzlesSolved
+            };
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Get user's score for a specific pack
+        /// </summary>
+        [HttpGet("profile/{userId}/pack/{packId}")]
+        public async Task<IActionResult> GetPackProgress(Guid userId, Guid packId)
+        {
+            if (userId == Guid.Empty || packId == Guid.Empty)
+            {
+                return BadRequest("UserId and PackId are required");
+            }
+
+            var packScore = await _gameService.GetUserPackScoreAsync(userId, packId);
+            var packPuzzlesSolved = await _gameService.GetUserPackPuzzlesSolvedAsync(userId, packId);
+
+            var response = new
+            {
+                packScore = packScore,
+                packPuzzlesSolved = packPuzzlesSolved
             };
 
             return Ok(response);
@@ -96,6 +120,7 @@ namespace resource_api.Controllers
     {
         public Guid PuzzleId { get; set; }
         public Guid UserId { get; set; }
+        public Guid PackId { get; set; }
         public string Guess { get; set; } = string.Empty;
     }
 }

@@ -24,5 +24,5 @@ api.interceptors.request.use(tokenInterceptor);
 export const getTopScorer = () => api.get('/game/top-scorer');
 export const getUserById = (id) => authApi.get(`/auth/user/${id}`);
 
-export { authApi };
+export { authApi, api };
 export default api;

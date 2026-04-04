@@ -25,7 +25,8 @@ namespace resource_api.Controllers
             {
                 Id = p.Id,
                 Name = p.Name,
-                Description = p.Description
+                Description = p.Description,
+                PuzzleCount = p.PackPuzzles.Count
             }).ToList();
 
             return Ok(packDtos);
@@ -37,5 +38,6 @@ namespace resource_api.Controllers
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public int PuzzleCount { get; set; }
     }
 }

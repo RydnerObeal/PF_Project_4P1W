@@ -51,71 +51,71 @@ export default function AdminImages() {
     };
 
     return (
-        <div style={{ padding: 24, maxWidth: 1000, margin: "0 auto" }}>
-            <h1>📷 Manage Images</h1>
+        <div className="page-shell admin-page">
+            <div className="page-header">
+                <div>
+                    <h1>📷 Image Studio</h1>
+                    <p className="text-muted">Upload images and tag them for your cute puzzle game.</p>
+                </div>
+            </div>
 
-            {error && <p style={{ color: "red" }}>{error}</p>}
+            {error && <p style={{ color: "#f87171" }}>{error}</p>}
 
-            {/* Add Image Form */}
-            <form onSubmit={addImage} style={{ display: "flex", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
+            <form onSubmit={addImage} className="form-row">
                 <input value={url} onChange={e => setUrl(e.target.value)}
                     placeholder="Image URL (required)" required
-                    style={{ flex: 2, minWidth: 200, padding: 8, borderRadius: 4, border: "1px solid #ccc" }} />
+                    className="input-field" />
                 <input value={fileName} onChange={e => setFileName(e.target.value)}
                     placeholder="File name (optional)"
-                    style={{ flex: 1, minWidth: 140, padding: 8, borderRadius: 4, border: "1px solid #ccc" }} />
-                <button type="submit"
-                    style={{ padding: "8px 16px", background: "#007bff", color: "#fff", border: "none", borderRadius: 4, cursor: "pointer" }}>
+                    className="input-field" />
+                <button type="submit" className="btn btn--primary">
                     Add Image
                 </button>
             </form>
 
-            {/* Filter by Tag */}
-            <div style={{ marginBottom: 16 }}>
-                <label style={{ marginRight: 8 }}>Filter by tag:</label>
-                <select value={filterTag} onChange={e => setFilterTag(e.target.value)}
-                    style={{ padding: "6px 10px", borderRadius: 4 }}>
-                    <option value="">All</option>
-                    {tags.map(t => <option key={t.id} value={t.name}>{t.name}</option>)}
-                </select>
+            <div className="section-card" style={{ marginBottom: 16 }}>
+                <div className="button-row" style={{ justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
+                    <span className="tag-badge">Filter by tag</span>
+                    <select value={filterTag} onChange={e => setFilterTag(e.target.value)}
+                        className="select-field" style={{ maxWidth: 260 }}>
+                        <option value="">All</option>
+                        {tags.map(t => <option key={t.id} value={t.name}>{t.name}</option>)}
+                    </select>
+                </div>
             </div>
 
-            {/* Image Grid */}
             {images.length === 0
-                ? <p style={{ color: "#666" }}>No images found.</p>
-                : <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16 }}>
+                ? <p style={{ color: "var(--text-muted)" }}>No images found.</p>
+                : <div className="card-grid">
                     {images.map(img => (
-                        <div key={img.id} style={{ border: "1px solid #ddd", borderRadius: 8, overflow: "hidden", background: "#fff" }}>
-                            <img src={img.url} alt={img.fileName}
-                                onError={e => { e.target.src = "https://placehold.co/200x150?text=No+Image"; }}
-                                style={{ width: "100%", height: 140, objectFit: "cover" }} />
-                            <div style={{ padding: 10 }}>
-                                <p style={{ fontSize: 12, color: "#666", margin: "0 0 8px", wordBreak: "break-all" }}>
-                                    {img.fileName || "No name"}
-                                </p>
+                        <div key={img.id} className="admin-card image-card">
+                            <img src={img.url?.startsWith("http") ? img.url : `http://localhost:5208${img.url}`}
+                                alt={img.fileName}
+                                onError={e => { e.target.src = "https://placehold.co/400x300?text=No+Image"; }}
+                                style={{ width: "100%", aspectRatio: "16/10", objectFit: "cover" }} />
+                            <div style={{ padding: 16 }}>
+                                <p className="tag-badge" style={{ marginBottom: 12 }}>{img.fileName || "No name"}</p>
 
-                                {/* Tags */}
-                                <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 8 }}>
+                                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
                                     {img.tags?.map(tag => (
-                                        <span key={tag} style={{ background: "#e9ecef", borderRadius: 4, padding: "2px 8px", fontSize: 12, display: "flex", alignItems: "center", gap: 4 }}>
+                                        <span key={tag} className="tag-badge">
                                             {tag}
-                                            <button onClick={() => removeTag(img.id, tag)}
-                                                style={{ border: "none", background: "none", color: "red", cursor: "pointer", padding: 0, fontSize: 14, lineHeight: 1 }}>×</button>
+                                            <button onClick={() => removeTag(img.id, tag)} className="btn btn--secondary btn--small" style={{ padding: '0 8px', minWidth: 'auto' }}>
+                                                ×
+                                            </button>
                                         </span>
                                     ))}
                                 </div>
 
-                                {/* Add Tag */}
                                 <select defaultValue="" onChange={e => { addTag(img.id, e.target.value); e.target.value = ""; }}
-                                    style={{ width: "100%", padding: "4px 6px", fontSize: 12, marginBottom: 8, borderRadius: 4, border: "1px solid #ccc" }}>
+                                    className="select-field" style={{ marginBottom: 12 }}>
                                     <option value="">+ Add tag</option>
                                     {tags.filter(t => !img.tags?.includes(t.name)).map(t => (
                                         <option key={t.id} value={t.name}>{t.name}</option>
                                     ))}
                                 </select>
 
-                                <button onClick={() => deleteImage(img.id)}
-                                    style={{ width: "100%", padding: "6px", background: "#dc3545", color: "#fff", border: "none", borderRadius: 4, cursor: "pointer", fontSize: 13 }}>
+                                <button onClick={() => deleteImage(img.id)} className="btn btn--danger btn--small" style={{ width: "100%" }}>
                                     Delete
                                 </button>
                             </div>

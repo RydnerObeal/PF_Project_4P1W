@@ -15,6 +15,14 @@ export default function Admin() {
                     style={{ padding: "12px 20px", background: "#6c757d", color: "#fff", border: "none", borderRadius: 6, cursor: "pointer", fontSize: 16, textAlign: "left" }}>
                     🏷️ Manage Tags
                 </button>
+                <button onClick={() => navigate("/admin/puzzles")}
+                    style={{ padding: "12px 20px", background: "#28a745", color: "#fff", border: "none", borderRadius: 6, cursor: "pointer", fontSize: 16, textAlign: "left" }}>
+                    🧩 Manage Puzzles
+                </button>
+                <button onClick={() => navigate("/admin/packs")}
+                    style={{ padding: "12px 20px", background: "#ffc107", color: "#000", border: "none", borderRadius: 6, cursor: "pointer", fontSize: 16, textAlign: "left" }}>
+                    📦 Manage Packs
+                </button>
             </div>
         </div>
     );

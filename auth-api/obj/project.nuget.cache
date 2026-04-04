@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UVkvIuX95DY=",
+  "dgSpecHash": "42FN7RePPQ0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rydner\\Downloads\\PF_Project_4P1W-iteration3\\PF_Project_4P1W-iteration-3\\auth-api\\auth-api.csproj",
+  "projectFilePath": "C:\\Users\\rydner\\OneDrive\\Documents\\GitHub\\PF_Project_4P1W\\auth-api\\auth-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rydner\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\rydner\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
