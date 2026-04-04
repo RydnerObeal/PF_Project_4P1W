@@ -11,8 +11,8 @@ namespace resource_api.Seed
             using var context = new ResourceDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<ResourceDbContext>>());
 
-            // Ensure database is created with all migrations
-            await context.Database.MigrateAsync();
+            // Ensure database is created with the current model for local development.
+            await context.Database.EnsureCreatedAsync();
 
             // Reset seed data by clearing old pack/puzzle/image/score data in dev
             if (await context.Puzzles.AnyAsync())
