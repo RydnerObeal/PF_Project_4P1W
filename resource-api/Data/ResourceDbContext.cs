@@ -11,6 +11,7 @@ namespace resource_api.Data
         public DbSet<Puzzle> Puzzles { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<GameScore> GameScores { get; set; }
+        public DbSet<PackPuzzle> PackPuzzles { get; set; }
 
         // Iteration 4 additions
         public DbSet<LibraryImage> LibraryImages { get; set; }
@@ -27,10 +28,6 @@ namespace resource_api.Data
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Description).HasMaxLength(500);
-                entity.HasMany(e => e.Puzzles)
-                    .WithOne(p => p.Pack)
-                    .HasForeignKey(p => p.PackId)
-                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<Puzzle>(entity =>
@@ -38,9 +35,25 @@ namespace resource_api.Data
                 entity.ToTable("Puzzles");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Answer).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.Hint).HasMaxLength(500);
+                entity.Property(e => e.Difficulty).HasMaxLength(50);
                 entity.HasMany(e => e.Images)
                     .WithOne(i => i.Puzzle)
                     .HasForeignKey(i => i.PuzzleId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<PackPuzzle>(entity =>
+            {
+                entity.ToTable("PackPuzzles");
+                entity.HasKey(e => new { e.PackId, e.PuzzleId });
+                entity.HasOne(e => e.Pack)
+                    .WithMany(p => p.PackPuzzles)
+                    .HasForeignKey(e => e.PackId)
+                    .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(e => e.Puzzle)
+                    .WithMany(p => p.PackPuzzles)
+                    .HasForeignKey(e => e.PuzzleId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
@@ -49,6 +62,10 @@ namespace resource_api.Data
                 entity.ToTable("Images");
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Url).IsRequired();
+                entity.HasOne(e => e.LibraryImage)
+                    .WithMany()
+                    .HasForeignKey(e => e.LibraryImageId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<GameScore>(entity =>
@@ -56,6 +73,10 @@ namespace resource_api.Data
                 entity.ToTable("GameScores");
                 entity.HasKey(e => e.Id);
                 entity.HasIndex(e => new { e.UserId, e.PuzzleId }).IsUnique();
+                entity.HasOne(e => e.Pack)
+                    .WithMany()
+                    .HasForeignKey(e => e.PackId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             // Iteration 4

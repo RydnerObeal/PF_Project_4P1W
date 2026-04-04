@@ -21,7 +21,7 @@ namespace resource_api.Services
         {
             // Load all puzzles in the pack
             var allPuzzles = await _context.Puzzles
-                .Where(p => p.PackId == packId)
+                .Where(p => p.PackPuzzles.Any(pp => pp.PackId == packId))
                 .Include(p => p.Images)
                 .ToListAsync();
 
@@ -34,10 +34,10 @@ namespace resource_api.Services
             var recentlyAttemptedIds = await _context.GameScores
                 .Where(gs => gs.UserId == userId)
                 .Join(
-                    _context.Puzzles.Where(p => p.PackId == packId),
+                    _context.PackPuzzles.Where(pp => pp.PackId == packId),
                     gs => gs.PuzzleId,
-                    p => p.Id,
-                    (gs, p) => new { gs.PuzzleId, gs.SolvedAt }
+                    pp => pp.PuzzleId,
+                    (gs, pp) => new { gs.PuzzleId, gs.SolvedAt }
                 )
                 .OrderByDescending(x => x.SolvedAt)
                 .Select(x => x.PuzzleId)
@@ -47,10 +47,10 @@ namespace resource_api.Services
             var recentlySolvedIds = await _context.GameScores
                 .Where(gs => gs.UserId == userId && gs.IsSolved)
                 .Join(
-                    _context.Puzzles.Where(p => p.PackId == packId),
+                    _context.PackPuzzles.Where(pp => pp.PackId == packId),
                     gs => gs.PuzzleId,
-                    p => p.Id,
-                    (gs, p) => new { gs.PuzzleId, gs.SolvedAt }
+                    pp => pp.PuzzleId,
+                    (gs, pp) => new { gs.PuzzleId, gs.SolvedAt }
                 )
                 .OrderByDescending(x => x.SolvedAt)
                 .Select(x => x.PuzzleId)
@@ -109,6 +109,50 @@ namespace resource_api.Services
             return stats != null 
                 ? (stats.TotalScore, stats.PuzzlesSolved)
                 : (0, 0);
+        }
+
+        public async Task<List<Puzzle>> GetAllPuzzlesAsync()
+        {
+            return await _context.Puzzles
+                .Include(p => p.PackPuzzles)
+                    .ThenInclude(pp => pp.Pack)
+                .Include(p => p.Images)
+                .OrderByDescending(p => p.CreatedAt)
+                .ToListAsync();
+        }
+
+        public async Task<Puzzle?> GetPuzzleByIdAsync(Guid id)
+        {
+            return await _context.Puzzles
+                .Include(p => p.PackPuzzles)
+                    .ThenInclude(pp => pp.Pack)
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
+
+        public async Task CreatePuzzleAsync(Puzzle puzzle, List<Image> images)
+        {
+            _context.Puzzles.Add(puzzle);
+            _context.Images.AddRange(images);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdatePuzzleAsync(Puzzle puzzle, List<Image> newImages)
+        {
+            var existingImages = await _context.Images.Where(i => i.PuzzleId == puzzle.Id).ToListAsync();
+            _context.Images.RemoveRange(existingImages);
+            _context.Images.AddRange(newImages);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeletePuzzleAsync(Guid id)
+        {
+            var puzzle = await _context.Puzzles.FindAsync(id);
+            if (puzzle != null)
+            {
+                _context.Puzzles.Remove(puzzle);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

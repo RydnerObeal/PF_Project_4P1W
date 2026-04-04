@@ -16,7 +16,7 @@ namespace resource_api.Services
         /// <summary>
         /// Submit a game guess and calculate score
         /// </summary>
-        public async Task<(bool correct, int score)> SubmitGuessAsync(Guid puzzleId, Guid userId, string guess)
+        public async Task<(bool correct, int score)> SubmitGuessAsync(Guid puzzleId, Guid userId, Guid packId, string guess)
         {
             // Get the puzzle
             var puzzle = await _context.Puzzles.FindAsync(puzzleId);
@@ -25,9 +25,16 @@ namespace resource_api.Services
                 return (false, 0);
             }
 
+            // Get the pack to determine scoring
+            var pack = await _context.Packs.FindAsync(packId);
+            if (pack == null)
+            {
+                return (false, 0);
+            }
+
             // Check if answer is correct (case-insensitive)
             bool isCorrect = puzzle.Answer.Equals(guess, StringComparison.OrdinalIgnoreCase);
-            int score = isCorrect ? 10 : 0;
+            int score = isCorrect ? pack.BaseScore : 0; // Use pack's base score
 
             // Check if already solved
             var existingScore = await _context.GameScores
@@ -51,6 +58,7 @@ namespace resource_api.Services
                     Id = Guid.NewGuid(),
                     UserId = userId,
                     PuzzleId = puzzleId,
+                    PackId = packId,
                     Score = score,
                     IsSolved = isCorrect,
                     SolvedAt = DateTime.UtcNow
@@ -81,6 +89,26 @@ namespace resource_api.Services
         {
             return await _context.GameScores
                 .Where(gs => gs.UserId == userId && gs.IsSolved)
+                .CountAsync();
+        }
+
+        /// <summary>
+        /// Get user's score for a specific pack
+        /// </summary>
+        public async Task<int> GetUserPackScoreAsync(Guid userId, Guid packId)
+        {
+            return await _context.GameScores
+                .Where(gs => gs.UserId == userId && gs.PackId == packId && gs.IsSolved)
+                .SumAsync(gs => gs.Score);
+        }
+
+        /// <summary>
+        /// Get number of puzzles solved by user in a specific pack
+        /// </summary>
+        public async Task<int> GetUserPackPuzzlesSolvedAsync(Guid userId, Guid packId)
+        {
+            return await _context.GameScores
+                .Where(gs => gs.UserId == userId && gs.PackId == packId && gs.IsSolved)
                 .CountAsync();
         }
 

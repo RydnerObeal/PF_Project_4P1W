@@ -15,6 +15,7 @@ export default function PlayPage() {
   const [submitting, setSubmitting] = useState(false);
   const [feedback, setFeedback] = useState(null);
   const [userStats, setUserStats] = useState({ totalScore: 0, puzzlesSolved: 0 });
+  const [packStats, setPackStats] = useState({ packScore: 0, packPuzzlesSolved: 0 });
   const [error, setError] = useState(null);
 
   // Fetch next puzzle
@@ -58,13 +59,23 @@ export default function PlayPage() {
     if (!user?.id) return;
 
     try {
-      const response = await api.get(`/game/profile/${user.id}`);
+      const globalResponse = await api.get(`/game/profile/${user.id}`);
+      console.log("Global stats response:", globalResponse.data);
       setUserStats({
-        totalScore: response.data.totalScore,
-        puzzlesSolved: response.data.puzzlesSolved
+        totalScore: globalResponse.data.totalScore,
+        puzzlesSolved: globalResponse.data.puzzlesSolved
+      });
+
+      // Fetch pack-specific stats
+      const packResponse = await api.get(`/game/profile/${user.id}/pack/${packId}`);
+      console.log("Pack stats response:", packResponse.data);
+      setPackStats({
+        packScore: packResponse.data.packScore || 0,
+        packPuzzlesSolved: packResponse.data.packPuzzlesSolved || 0
       });
     } catch (err) {
       console.error("Error fetching user stats:", err);
+      console.error("Error details:", err.response?.data);
     }
   };
 
@@ -95,6 +106,7 @@ export default function PlayPage() {
       const response = await api.post("/game/submit", {
         puzzleId: puzzle,
         userId: user?.id || "",
+        packId: packId,
         guess: guess.trim()
       });
 
@@ -107,15 +119,20 @@ export default function PlayPage() {
           totalScore: prev.totalScore + score,
           puzzlesSolved: prev.puzzlesSolved + 1
         }));
+        setPackStats(prev => ({
+          packScore: prev.packScore + score,
+          packPuzzlesSolved: prev.packPuzzlesSolved + 1
+        }));
       }
 
       // Auto-load next puzzle after feedback delay (for both correct and incorrect)
       setTimeout(async () => {
         setFeedback(null);
-        await fetchNextPuzzle();
         if (correct) {
+          // Refetch all stats before loading next puzzle
           await fetchUserStats();
         }
+        await fetchNextPuzzle();
       }, 2000);
     } catch (err) {
       setError("Failed to submit guess. Please try again.");
@@ -169,30 +186,63 @@ export default function PlayPage() {
 
   return (
     <div style={{ padding: "20px", maxWidth: "900px", margin: "0 auto" }}>
-      {/* Profile Progress */}
+      {/* Stats - Pack and Total */}
       <div style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginBottom: "30px",
-        padding: "15px",
-        backgroundColor: "#f8f9fa",
-        borderRadius: "8px"
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "15px",
+        marginBottom: "30px"
       }}>
-        <div>
-          <p style={{ margin: "0 0 5px 0", color: "#666", fontSize: "14px" }}>
-            Total Score
+        {/* Pack Stats */}
+        <div style={{
+          padding: "20px",
+          backgroundColor: "#e8f4f8",
+          borderRadius: "12px",
+          border: "2px solid #0099cc"
+        }}>
+          <p style={{ margin: "0 0 8px 0", color: "#0066aa", fontSize: "12px", fontWeight: "600" }}>
+            THIS PACK
           </p>
-          <p style={{ margin: 0, fontSize: "24px", fontWeight: "bold", color: "#333" }}>
-            {userStats.totalScore}
-          </p>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div>
+              <p style={{ margin: "0 0 4px 0", color: "#666", fontSize: "13px" }}>High Score</p>
+              <p style={{ margin: 0, fontSize: "28px", fontWeight: "bold", color: "#0099cc" }}>
+                {packStats.packScore}
+              </p>
+            </div>
+            <div>
+              <p style={{ margin: "0 0 4px 0", color: "#666", fontSize: "13px" }}>Solved</p>
+              <p style={{ margin: 0, fontSize: "28px", fontWeight: "bold", color: "#0099cc" }}>
+                {packStats.packPuzzlesSolved}
+              </p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p style={{ margin: "0 0 5px 0", color: "#666", fontSize: "14px" }}>
-            Puzzles Solved
+
+        {/* Total Stats */}
+        <div style={{
+          padding: "20px",
+          backgroundColor: "#f0e8f8",
+          borderRadius: "12px",
+          border: "2px solid #9933ff"
+        }}>
+          <p style={{ margin: "0 0 8px 0", color: "#6600cc", fontSize: "12px", fontWeight: "600" }}>
+            TOTAL
           </p>
-          <p style={{ margin: 0, fontSize: "24px", fontWeight: "bold", color: "#333" }}>
-            {userStats.puzzlesSolved}
-          </p>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div>
+              <p style={{ margin: "0 0 4px 0", color: "#666", fontSize: "13px" }}>Total Score</p>
+              <p style={{ margin: 0, fontSize: "28px", fontWeight: "bold", color: "#9933ff" }}>
+                {userStats.totalScore}
+              </p>
+            </div>
+            <div>
+              <p style={{ margin: "0 0 4px 0", color: "#666", fontSize: "13px" }}>Solved</p>
+              <p style={{ margin: 0, fontSize: "28px", fontWeight: "bold", color: "#9933ff" }}>
+                {userStats.puzzlesSolved}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

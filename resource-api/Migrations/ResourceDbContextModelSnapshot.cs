@@ -57,6 +57,9 @@ namespace resource_api.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("LibraryImageId")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Position")
                         .HasColumnType("INTEGER");
 
@@ -68,6 +71,8 @@ namespace resource_api.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("LibraryImageId");
 
                     b.HasIndex("PuzzleId");
 
@@ -137,6 +142,24 @@ namespace resource_api.Migrations
                     b.ToTable("Packs", (string)null);
                 });
 
+            modelBuilder.Entity("resource_api.Models.PackPuzzle", b =>
+                {
+                    b.Property<Guid>("PackId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PuzzleId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AddedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PackId", "PuzzleId");
+
+                    b.HasIndex("PuzzleId");
+
+                    b.ToTable("PackPuzzles", (string)null);
+                });
+
             modelBuilder.Entity("resource_api.Models.Puzzle", b =>
                 {
                     b.Property<Guid>("Id")
@@ -151,12 +174,15 @@ namespace resource_api.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("PackId")
+                    b.Property<string>("Difficulty")
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Hint")
+                        .HasMaxLength(500)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PackId");
 
                     b.ToTable("Puzzles", (string)null);
                 });
@@ -193,11 +219,19 @@ namespace resource_api.Migrations
 
             modelBuilder.Entity("resource_api.Models.Image", b =>
                 {
+                    b.HasOne("resource_api.Models.LibraryImage", "LibraryImage")
+                        .WithMany()
+                        .HasForeignKey("LibraryImageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("resource_api.Models.Puzzle", "Puzzle")
                         .WithMany("Images")
                         .HasForeignKey("PuzzleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("LibraryImage");
 
                     b.Navigation("Puzzle");
                 });
@@ -217,15 +251,23 @@ namespace resource_api.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("resource_api.Models.Puzzle", b =>
+            modelBuilder.Entity("resource_api.Models.PackPuzzle", b =>
                 {
                     b.HasOne("resource_api.Models.Pack", "Pack")
-                        .WithMany("Puzzles")
+                        .WithMany("PackPuzzles")
                         .HasForeignKey("PackId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("resource_api.Models.Puzzle", "Puzzle")
+                        .WithMany("PackPuzzles")
+                        .HasForeignKey("PuzzleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Pack");
+
+                    b.Navigation("Puzzle");
                 });
 
             modelBuilder.Entity("resource_api.Models.LibraryImage", b =>
@@ -235,12 +277,14 @@ namespace resource_api.Migrations
 
             modelBuilder.Entity("resource_api.Models.Pack", b =>
                 {
-                    b.Navigation("Puzzles");
+                    b.Navigation("PackPuzzles");
                 });
 
             modelBuilder.Entity("resource_api.Models.Puzzle", b =>
                 {
                     b.Navigation("Images");
+
+                    b.Navigation("PackPuzzles");
                 });
 
             modelBuilder.Entity("resource_api.Models.Tag", b =>
