@@ -22,7 +22,8 @@ namespace resource_api.Migrations
                 .HasAnnotation("ProductVersion", "9.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            // SQL Server-specific identity configuration is not needed for SQLite.
+            // SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             // Include all other entities and configurations as in the snapshot...
             // This is simplified for brevity
