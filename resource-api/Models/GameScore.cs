@@ -10,6 +10,10 @@ namespace resource_api.Models
         public Guid PackId { get; set; } // Track which pack the puzzle belongs to
         public int Score { get; set; }
         public bool IsSolved { get; set; }
+<<<<<<< HEAD
+        public int Attempts { get; set; } // Track number of attempts (wrong guesses)
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
         public DateTime SolvedAt { get; set; }
 
         // Navigation properties

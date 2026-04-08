@@ -1,12 +1,21 @@
 import axios from "axios";
 
-// Auth API (port 5068) and Resource API (port 5208)
+const getLocalhostBaseUrl = (httpPort, httpsPort) => {
+  if (typeof window === "undefined") {
+    return `http://localhost:${httpPort}/api`;
+  }
+
+  return window.location.protocol === "https:"
+    ? `https://localhost:${httpsPort}/api`
+    : `http://localhost:${httpPort}/api`;
+};
+
 const authApi = axios.create({
-  baseURL: "http://localhost:5068/api",
+  baseURL: import.meta.env.VITE_AUTH_API_URL || getLocalhostBaseUrl(5068, 7182),
 });
 
 const api = axios.create({
-  baseURL: "http://localhost:5208/api",
+  baseURL: import.meta.env.VITE_RESOURCE_API_URL || getLocalhostBaseUrl(5208, 7180),
 });
 
 // Interceptor for both to add auth token

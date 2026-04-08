@@ -29,6 +29,16 @@ namespace resource_api.Migrations
                 table: "GameScores",
                 column: "PackId");
 
+<<<<<<< HEAD
+            // SQLite doesn't support adding foreign keys to existing tables
+            // migrationBuilder.AddForeignKey(
+            //     name: "FK_GameScores_Packs_PackId",
+            //     table: "GameScores",
+            //     column: "PackId",
+            //     principalTable: "Packs",
+            //     principalColumn: "Id",
+            //     onDelete: ReferentialAction.Cascade);
+=======
             migrationBuilder.AddForeignKey(
                 name: "FK_GameScores_Packs_PackId",
                 table: "GameScores",
@@ -36,14 +46,22 @@ namespace resource_api.Migrations
                 principalTable: "Packs",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
+>>>>>>> origin/iteration-5-rydner-obeal
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+<<<<<<< HEAD
+            // SQLite doesn't support dropping foreign keys from existing tables
+            // migrationBuilder.DropForeignKey(
+            //     name: "FK_GameScores_Packs_PackId",
+            //     table: "GameScores");
+=======
             migrationBuilder.DropForeignKey(
                 name: "FK_GameScores_Packs_PackId",
                 table: "GameScores");
+>>>>>>> origin/iteration-5-rydner-obeal
 
             migrationBuilder.DropIndex(
                 name: "IX_GameScores_PackId",

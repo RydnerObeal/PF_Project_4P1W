@@ -38,12 +38,18 @@ export default function PlayPage() {
       console.log("Number of images:", response.data.images?.length);
 
       setPuzzle(response.data.puzzleId);
-      setImages(response.data.images?.map(img => ({
-        ...img,
-        url: img.url?.startsWith("http")
+      const processedImages = response.data.images?.map(img => {
+        const fullUrl = img.url?.startsWith("http")
           ? img.url
-          : `http://localhost:5208${img.url}`
-      })) || []);
+          : `http://localhost:5208${img.url}`;
+        console.log("Processing image:", img.url, "->", fullUrl);
+        return {
+          ...img,
+          url: fullUrl
+        };
+      }) || [];
+      console.log("Processed images:", processedImages);
+      setImages(processedImages);
     } catch (err) {
       console.error("Error fetching puzzle:", err.response?.data || err.message);
       console.log("Response status:", err.response?.status);
@@ -107,7 +113,7 @@ export default function PlayPage() {
         puzzleId: puzzle,
         userId: user?.id || "",
         packId: packId,
-        guess: guess.trim()
+        guess: guess.trim().toLowerCase()
       });
 
       const { correct, score } = response.data;
@@ -257,7 +263,8 @@ export default function PlayPage() {
           <div
             key={image.id}
             style={{
-              aspectRatio: "1 / 1",
+              width: "300px",
+              height: "300px",
               overflow: "hidden",
               borderRadius: "8px",
               backgroundColor: "#e9ecef"
@@ -266,9 +273,11 @@ export default function PlayPage() {
             <img
               src={image.url}
               alt={`Image ${image.position + 1}`}
+              onLoad={() => console.log("Image loaded successfully:", image.url)}
               onError={(e) => {
+                console.error("Image failed to load:", image.url, e);
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = "https://via.placeholder.com/500x500?text=Image+Unavailable";
+                e.currentTarget.src = "https://via.placeholder.com/300x300?text=Image+Unavailable";
               }}
               style={{
                 width: "100%",

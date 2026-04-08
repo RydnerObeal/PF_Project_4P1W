@@ -3454,23 +3454,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\Erich Garcia\\.nuget\\packages\\": {},
+=======
     "C:\\Users\\rydner\\.nuget\\packages\\": {},
+>>>>>>> origin/iteration-5-rydner-obeal
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Erich Garcia\\Downloads\\PF_Project_4P1W-iteration-5-rydner-obeal\\PF_Project_4P1W-iteration-5-rydner-obeal\\resource-api\\resource-api.csproj",
+      "projectName": "resource-api",
+      "projectPath": "C:\\Users\\Erich Garcia\\Downloads\\PF_Project_4P1W-iteration-5-rydner-obeal\\PF_Project_4P1W-iteration-5-rydner-obeal\\resource-api\\resource-api.csproj",
+      "packagesPath": "C:\\Users\\Erich Garcia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Erich Garcia\\Downloads\\PF_Project_4P1W-iteration-5-rydner-obeal\\PF_Project_4P1W-iteration-5-rydner-obeal\\resource-api\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\rydner\\OneDrive\\Documents\\GitHub\\PF_Project_4P1W\\resource-api\\resource-api.csproj",
       "projectName": "resource-api",
       "projectPath": "C:\\Users\\rydner\\OneDrive\\Documents\\GitHub\\PF_Project_4P1W\\resource-api\\resource-api.csproj",
       "packagesPath": "C:\\Users\\rydner\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rydner\\OneDrive\\Documents\\GitHub\\PF_Project_4P1W\\resource-api\\obj\\",
+>>>>>>> origin/iteration-5-rydner-obeal
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
+        "C:\\Users\\Erich Garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "C:\\Users\\rydner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/iteration-5-rydner-obeal
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3539,7 +3555,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+>>>>>>> origin/iteration-5-rydner-obeal
       }
     }
   }

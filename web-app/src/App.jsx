@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import PacksPage from "./pages/PacksPage";
 import PlayPage from "./pages/PlayPage";
+import Profile from "./pages/Profile";
 import AdminImages from "./pages/AdminImages";
 import AdminTags from "./pages/AdminTags";
 import AdminPuzzles from "./pages/AdminPuzzles";
@@ -27,13 +28,18 @@ function AppLayout() {
             {user && (
                 <header className="app-header">
                     <div className="app-header__content">
-                        <div>
+                        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                             <span className="app-header__user">👤 {user.email}</span>
                             {user.role === "admin" && <span className="app-header__role">Admin</span>}
                         </div>
-                        <button onClick={handleLogout} className="btn btn--secondary btn--small">
-                            Logout
-                        </button>
+                        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                            <Link to="/profile" className="btn btn--secondary btn--small">
+                                Profile
+                            </Link>
+                            <button onClick={handleLogout} className="btn btn--secondary btn--small">
+                                Logout
+                            </button>
+                        </div>
                     </div>
                 </header>
             )}
@@ -51,6 +57,7 @@ function AppLayout() {
                 <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
                 <Route path="/packs" element={<ProtectedRoute><PacksPage /></ProtectedRoute>} />
                 <Route path="/play/:packId" element={<ProtectedRoute><PlayPage /></ProtectedRoute>} />
+                <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
                 <Route path="/admin/images" element={<AdminRoute><AdminImages /></AdminRoute>} />
                 <Route path="/admin/tags" element={<AdminRoute><AdminTags /></AdminRoute>} />
                 <Route path="/admin/puzzles" element={<AdminRoute><AdminPuzzles /></AdminRoute>} />

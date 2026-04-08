@@ -22,7 +22,8 @@ export default function Home() {
         const profileResponse = await api.get(`/game/profile/${user.id}`);
         setUserStats({
           totalScore: profileResponse.data.totalScore,
-          puzzlesSolved: profileResponse.data.puzzlesSolved
+          puzzlesSolved: profileResponse.data.puzzlesSolved,
+          totalAttempts: profileResponse.data.totalAttempts
         });
 
         // Fetch top scorer (global leaderboard)
@@ -44,6 +45,10 @@ export default function Home() {
 
   const handlePlayClick = () => {
     navigate("/packs");
+  };
+
+  const handleProfileClick = () => {
+    navigate("/profile");
   };
 
   if (loading) {
@@ -220,33 +225,66 @@ export default function Home() {
         </div>
       )}
 
-      {/* CTA Button */}
-      <button
-        onClick={handlePlayClick}
-        style={{
-          width: "100%",
-          padding: "16px 24px",
-          borderRadius: "16px",
-          background: "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
-          color: "#ffffff",
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          fontSize: "16px",
-          fontWeight: "700",
-          cursor: "pointer",
-          transition: "all 0.2s ease",
-          boxShadow: "0 12px 28px rgba(139, 92, 246, 0.18)"
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.transform = "translateY(-2px)";
-          e.target.style.boxShadow = "0 18px 34px rgba(139, 92, 246, 0.3)";
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.transform = "translateY(0)";
-          e.target.style.boxShadow = "0 12px 28px rgba(139, 92, 246, 0.18)";
-        }}
-      >
-        🎮 Play Puzzle Packs
-      </button>
+      {/* CTA Buttons */}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gap: "16px"
+      }}>
+        <button
+          onClick={handlePlayClick}
+          style={{
+            padding: "16px 24px",
+            borderRadius: "16px",
+            background: "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+            color: "#ffffff",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            fontSize: "16px",
+            fontWeight: "700",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+            boxShadow: "0 12px 28px rgba(139, 92, 246, 0.18)"
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = "translateY(-2px)";
+            e.target.style.boxShadow = "0 18px 34px rgba(139, 92, 246, 0.3)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = "translateY(0)";
+            e.target.style.boxShadow = "0 12px 28px rgba(139, 92, 246, 0.18)";
+          }}
+        >
+          🎮 Play Puzzle Packs
+        </button>
+
+        <button
+          onClick={handleProfileClick}
+          style={{
+            padding: "16px 24px",
+            borderRadius: "16px",
+            background: "rgba(255, 255, 255, 0.08)",
+            color: "#f2ecff",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            fontSize: "16px",
+            fontWeight: "700",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+            boxShadow: "0 12px 28px rgba(8, 11, 28, 0.16)"
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.12)";
+            e.target.style.transform = "translateY(-2px)";
+            e.target.style.boxShadow = "0 18px 34px rgba(8, 11, 28, 0.25)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = "rgba(255, 255, 255, 0.08)";
+            e.target.style.transform = "translateY(0)";
+            e.target.style.boxShadow = "0 12px 28px rgba(8, 11, 28, 0.16)";
+          }}
+        >
+          📊 View Profile
+        </button>
+      </div>
     </div>
   );
 }

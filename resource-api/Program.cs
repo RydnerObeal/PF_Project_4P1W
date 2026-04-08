@@ -22,7 +22,11 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowWebApp", policy =>
     {
+<<<<<<< HEAD
+        policy.SetIsOriginAllowed(origin => origin != null && (origin.StartsWith("http://localhost") || origin.StartsWith("https://localhost")))
+=======
         policy.WithOrigins("http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175")
+>>>>>>> origin/iteration-5-rydner-obeal
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -51,6 +55,18 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+<<<<<<< HEAD
+// Apply pending migrations automatically on startup
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ResourceDbContext>();
+    await context.Database.MigrateAsync();
+}
+
+// Seed initial data
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

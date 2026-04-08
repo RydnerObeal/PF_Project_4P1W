@@ -23,9 +23,21 @@ namespace resource_api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+<<<<<<< HEAD
+                    b.Property<int>("Attempts")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("IsSolved")
                         .HasColumnType("INTEGER");
 
+                    b.Property<Guid>("PackId")
+                        .HasColumnType("TEXT");
+
+=======
+                    b.Property<bool>("IsSolved")
+                        .HasColumnType("INTEGER");
+
+>>>>>>> origin/iteration-5-rydner-obeal
                     b.Property<Guid>("PuzzleId")
                         .HasColumnType("TEXT");
 
@@ -40,6 +52,11 @@ namespace resource_api.Migrations
 
                     b.HasKey("Id");
 
+<<<<<<< HEAD
+                    b.HasIndex("PackId");
+
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
                     b.HasIndex("PuzzleId");
 
                     b.HasIndex("UserId", "PuzzleId")
@@ -57,7 +74,11 @@ namespace resource_api.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
+<<<<<<< HEAD
+                    b.Property<Guid?>("LibraryImageId")
+=======
                     b.Property<Guid>("LibraryImageId")
+>>>>>>> origin/iteration-5-rydner-obeal
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Position")
@@ -121,6 +142,12 @@ namespace resource_api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+<<<<<<< HEAD
+                    b.Property<int>("BaseScore")
+                        .HasColumnType("INTEGER");
+
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
@@ -208,12 +235,26 @@ namespace resource_api.Migrations
 
             modelBuilder.Entity("resource_api.Models.GameScore", b =>
                 {
+<<<<<<< HEAD
+                    b.HasOne("resource_api.Models.Pack", "Pack")
+                        .WithMany()
+                        .HasForeignKey("PackId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
                     b.HasOne("resource_api.Models.Puzzle", "Puzzle")
                         .WithMany()
                         .HasForeignKey("PuzzleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+<<<<<<< HEAD
+                    b.Navigation("Pack");
+
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
                     b.Navigation("Puzzle");
                 });
 
@@ -222,8 +263,12 @@ namespace resource_api.Migrations
                     b.HasOne("resource_api.Models.LibraryImage", "LibraryImage")
                         .WithMany()
                         .HasForeignKey("LibraryImageId")
+<<<<<<< HEAD
+                        .OnDelete(DeleteBehavior.Restrict);
+=======
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+>>>>>>> origin/iteration-5-rydner-obeal
 
                     b.HasOne("resource_api.Models.Puzzle", "Puzzle")
                         .WithMany("Images")

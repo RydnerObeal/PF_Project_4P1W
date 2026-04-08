@@ -42,7 +42,14 @@ namespace resource_api.Services
 
             if (existingScore != null)
             {
+<<<<<<< HEAD
+                // Increment attempts
+                existingScore.Attempts++;
+                
+                // Update existing score only if not already solved and now correct
+=======
                 // Update existing score
+>>>>>>> origin/iteration-5-rydner-obeal
                 if (isCorrect && !existingScore.IsSolved)
                 {
                     existingScore.IsSolved = true;
@@ -61,6 +68,10 @@ namespace resource_api.Services
                     PackId = packId,
                     Score = score,
                     IsSolved = isCorrect,
+<<<<<<< HEAD
+                    Attempts = 1, // First attempt
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
                     SolvedAt = DateTime.UtcNow
                 };
 
@@ -93,6 +104,42 @@ namespace resource_api.Services
         }
 
         /// <summary>
+<<<<<<< HEAD
+        /// Get total attempts by user across all puzzles
+        /// </summary>
+        public async Task<int> GetUserTotalAttemptsAsync(Guid userId)
+        {
+            return await _context.GameScores
+                .Where(gs => gs.UserId == userId)
+                .SumAsync(gs => gs.Attempts);
+        }
+
+        /// <summary>
+        /// Get recent puzzles solved by user
+        /// </summary>
+        public async Task<List<dynamic>> GetUserRecentPuzzlesAsync(Guid userId, int limit = 10)
+        {
+            return await _context.GameScores
+                .Where(gs => gs.UserId == userId && gs.IsSolved)
+                .Include(gs => gs.Puzzle)
+                .Include(gs => gs.Pack)
+                .OrderByDescending(gs => gs.SolvedAt)
+                .Take(limit)
+                .Select(gs => new
+                {
+                    puzzleId = gs.PuzzleId,
+                    answer = gs.Puzzle != null ? gs.Puzzle.Answer : "Unknown",
+                    packName = gs.Pack != null ? gs.Pack.Name : "Unknown",
+                    score = gs.Score,
+                    attempts = gs.Attempts,
+                    solvedAt = gs.SolvedAt
+                })
+                .ToListAsync<dynamic>();
+        }
+
+        /// <summary>
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
         /// Get user's score for a specific pack
         /// </summary>
         public async Task<int> GetUserPackScoreAsync(Guid userId, Guid packId)

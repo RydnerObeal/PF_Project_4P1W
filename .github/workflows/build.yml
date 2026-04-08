@@ -1,0 +1,65 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-web-app:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: web-app/package-lock.json
+    - name: Install dependencies
+      run: |
+        cd web-app
+        npm ci
+    - name: Build
+      run: |
+        cd web-app
+        npm run build
+    - name: Lint
+      run: |
+        cd web-app
+        npm run lint
+
+  build-auth-api:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0.x'
+    - name: Restore dependencies
+      run: |
+        cd auth-api
+        dotnet restore
+    - name: Build
+      run: |
+        cd auth-api
+        dotnet build --no-restore
+
+  build-resource-api:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '9.0.x'
+    - name: Restore dependencies
+      run: |
+        cd resource-api
+        dotnet restore
+    - name: Build
+      run: |
+        cd resource-api
+        dotnet build --no-restore
