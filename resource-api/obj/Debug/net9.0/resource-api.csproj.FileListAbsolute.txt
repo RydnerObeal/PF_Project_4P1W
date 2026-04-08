@@ -813,6 +813,7 @@ C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\resource-api\obj\Debug
 C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\resource-api\obj\Debug\net9.0\resource.A7EF2A14.Up2Date
 C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\resource-api\obj\Debug\net9.0\resource-api.genruntimeconfig.cache
 C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\resource-api\obj\Debug\net9.0\ref\resource-api.dll
+<<<<<<< HEAD
 C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\resource-api\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\resource-api\bin\Debug\net9.0\appsettings.json
 C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\resource-api\bin\Debug\net9.0\resource-api.staticwebassets.runtime.json
@@ -976,3 +977,5 @@ C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Proj
 C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\resource-api\obj\Debug\net9.0\resource-api.pdb
 C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\resource-api\obj\Debug\net9.0\resource-api.genruntimeconfig.cache
 C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\resource-api\obj\Debug\net9.0\ref\resource-api.dll
+=======
+>>>>>>> origin/iteration-5-rydner-obeal

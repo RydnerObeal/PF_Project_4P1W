@@ -6,9 +6,15 @@ namespace resource_api.Models
     {
         public Guid Id { get; set; }
         public Guid PuzzleId { get; set; }
+<<<<<<< HEAD
         public Guid? LibraryImageId { get; set; }
         public string Url { get; set; } = string.Empty;
         public int Position { get; set; }
+=======
+        public Guid LibraryImageId { get; set; }
+        public string Url { get; set; } = string.Empty;
+        public int Position { get; set; } // 0-3 for the 4 images
+>>>>>>> origin/iteration-5-rydner-obeal
         public DateTime CreatedAt { get; set; }
 
         // Navigation property

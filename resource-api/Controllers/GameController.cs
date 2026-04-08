@@ -28,11 +28,14 @@ namespace resource_api.Controllers
                 return BadRequest("Guess is required");
             }
 
+<<<<<<< HEAD
             if (request.Guess.Length > 100)
             {
                 return BadRequest("Guess is too long");
             }
 
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
             if (request.PuzzleId == Guid.Empty || request.UserId == Guid.Empty || request.PackId == Guid.Empty)
             {
                 return BadRequest("PuzzleId, PackId, and UserId are required");
@@ -66,13 +69,20 @@ namespace resource_api.Controllers
 
             var totalScore = await _gameService.GetUserTotalScoreAsync(userId);
             var puzzlesSolved = await _gameService.GetUserPuzzlesSolvedAsync(userId);
+<<<<<<< HEAD
             var totalAttempts = await _gameService.GetUserTotalAttemptsAsync(userId);
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
 
             var response = new
             {
                 totalScore = totalScore,
+<<<<<<< HEAD
                 puzzlesSolved = puzzlesSolved,
                 totalAttempts = totalAttempts
+=======
+                puzzlesSolved = puzzlesSolved
+>>>>>>> origin/iteration-5-rydner-obeal
             };
 
             return Ok(response);
@@ -102,6 +112,7 @@ namespace resource_api.Controllers
         }
 
         /// <summary>
+<<<<<<< HEAD
         /// Get user's recent solved puzzles
         /// </summary>
         [HttpGet("profile/{userId}/recent")]
@@ -116,6 +127,11 @@ namespace resource_api.Controllers
 
             return Ok(recentPuzzles);
         }
+=======
+        /// Get the top scorer
+        /// </summary>
+        [HttpGet("top-scorer")]
+>>>>>>> origin/iteration-5-rydner-obeal
         public async Task<IActionResult> GetTopScorer()
         {
             var topScorer = await _gameService.GetTopScorerAsync();

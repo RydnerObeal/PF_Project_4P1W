@@ -1,6 +1,9 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+<<<<<<< HEAD
 using System.Text.RegularExpressions;
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
 using auth_api.DTOs;
 using auth_api.Models;
 using auth_api.Services;
@@ -34,6 +37,7 @@ namespace auth_api.Controllers
                 return BadRequest(new { message = "Email and password are required." });
             }
 
+<<<<<<< HEAD
             if (!Regex.IsMatch(dto.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 return BadRequest(new { message = "Invalid email format." });
@@ -44,6 +48,8 @@ namespace auth_api.Controllers
                 return BadRequest(new { message = "Password must be at least 6 characters long." });
             }
 
+=======
+>>>>>>> origin/iteration-5-rydner-obeal
             var existingUser = UserStore.Users.FirstOrDefault(u => u.Email.ToLower() == dto.Email.ToLower());
             if (existingUser != null)
             {
