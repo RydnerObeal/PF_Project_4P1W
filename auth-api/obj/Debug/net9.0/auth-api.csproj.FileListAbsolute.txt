@@ -1,0 +1,208 @@
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.csproj.AssemblyReference.cache
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfoInputs.cache
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfo.cs
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.csproj.CoreCompileInputs.cache
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.sourcelink.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\appsettings.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.staticwebassets.endpoints.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.exe
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.deps.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.runtimeconfig.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.pdb
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\scopedcss\bundle\auth-api.styles.css
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.csproj.Up2Date
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\refint\auth-api.dll
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.pdb
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.genruntimeconfig.cache
+C:\Users\Erich Garcia\source\repos\PF_Project_4P1W\auth-api\obj\Debug\net9.0\ref\auth-api.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\appsettings.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\auth-api.staticwebassets.endpoints.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\auth-api.exe
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\auth-api.deps.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\auth-api.runtimeconfig.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\auth-api.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\auth-api.pdb
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.csproj.AssemblyReference.cache
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfoInputs.cache
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfo.cs
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.csproj.CoreCompileInputs.cache
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.sourcelink.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\scopedcss\bundle\auth-api.styles.css
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.csproj.Up2Date
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\refint\auth-api.dll
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.pdb
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\auth-api.genruntimeconfig.cache
+C:\Users\Gerry Vilda\PF_Project_4P1W\PF_Project_4P1W-iteration-1-erich-garcia\auth-api\obj\Debug\net9.0\ref\auth-api.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\appsettings.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\auth-api.staticwebassets.endpoints.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\auth-api.exe
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\auth-api.deps.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\auth-api.runtimeconfig.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\auth-api.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\auth-api.pdb
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.csproj.AssemblyReference.cache
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfoInputs.cache
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfo.cs
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.csproj.CoreCompileInputs.cache
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\scopedcss\bundle\auth-api.styles.css
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.csproj.Up2Date
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\refint\auth-api.dll
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.pdb
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\auth-api.genruntimeconfig.cache
+C:\Users\rydner\Downloads\PF_Project_4P1W-iteration3\PF_Project_4P1W-iteration-3\auth-api\obj\Debug\net9.0\ref\auth-api.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\appsettings.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.staticwebassets.endpoints.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.exe
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.deps.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.runtimeconfig.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\auth-api.pdb
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.csproj.AssemblyReference.cache
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfoInputs.cache
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfo.cs
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.csproj.CoreCompileInputs.cache
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.sourcelink.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\scopedcss\bundle\auth-api.styles.css
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.csproj.Up2Date
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\refint\auth-api.dll
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.pdb
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\auth-api.genruntimeconfig.cache
+C:\Users\rydner\OneDrive\Documents\GitHub\PF_Project_4P1W\auth-api\obj\Debug\net9.0\ref\auth-api.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\appsettings.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\auth-api.staticwebassets.endpoints.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\auth-api.exe
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\auth-api.deps.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\auth-api.runtimeconfig.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\auth-api.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\auth-api.pdb
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.csproj.AssemblyReference.cache
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfoInputs.cache
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.AssemblyInfo.cs
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.csproj.CoreCompileInputs.cache
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\scopedcss\bundle\auth-api.styles.css
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.csproj.Up2Date
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\refint\auth-api.dll
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.pdb
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\auth-api.genruntimeconfig.cache
+C:\Users\Erich Garcia\Downloads\PF_Project_4P1W-iteration-5-rydner-obeal\PF_Project_4P1W-iteration-5-rydner-obeal\auth-api\obj\Debug\net9.0\ref\auth-api.dll
